@@ -50,6 +50,10 @@ func (dictionary Dictionary) Update(key string, value string) error {
 	return nil
 }
 
+func (dictionary Dictionary) Delete(key string) {
+	delete(dictionary, key)
+}
+
 func (e DictionaryError) Error() string {
 	return string(e)
 }
